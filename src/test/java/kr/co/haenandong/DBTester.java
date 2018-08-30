@@ -19,7 +19,7 @@ public class DBTester {
 	@Test
 	public void dbTester() throws Exception {
 		try(Connection con = ds.getConnection()) {
-			System.out.println(con);
+			System.out.println("\n >>>>>>>>>> Connection 출력 : " + con + "\n");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
