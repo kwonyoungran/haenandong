@@ -1,4 +1,4 @@
-package kr.co.haenandong.test.mysql;
+/*package kr.co.haenandong.test.mysql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -58,3 +58,4 @@ public class MySQLConnectionTest {
 		return "home";
 	}
 }
+*/
