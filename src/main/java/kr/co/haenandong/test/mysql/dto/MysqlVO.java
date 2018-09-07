@@ -7,7 +7,7 @@
  */
 package kr.co.haenandong.test.mysql.dto;
 
-public class MemberVO {
+public class MysqlVO {
 	private String id;
 	private String password;
 	private String name;

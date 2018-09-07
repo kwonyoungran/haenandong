@@ -7,10 +7,10 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import kr.co.haenandong.test.mysql.dto.MemberVO;
+import kr.co.haenandong.test.mysql.dto.MysqlVO;
 
 @Repository
-public class MemberDAOImpl implements MemberDAO {
+public class MysqlDAOImpl implements MysqlDAO {
 
 	@Inject
 	private SqlSession sqlSession;
@@ -18,7 +18,7 @@ public class MemberDAOImpl implements MemberDAO {
 	private static final String Namespace = "memberMapper";
 
 	@Override
-	public List<MemberVO> selectMember() throws Exception {
+	public List<MysqlVO> selectMember() throws Exception {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList(Namespace + ".selectMember");
 	}

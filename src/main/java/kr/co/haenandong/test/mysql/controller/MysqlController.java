@@ -19,21 +19,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import kr.co.haenandong.test.mysql.dto.MemberVO;
-import kr.co.haenandong.test.mysql.service.MemberService;
+import kr.co.haenandong.test.mysql.dto.MysqlVO;
+import kr.co.haenandong.test.mysql.service.MysqlService;
 
 @Controller
-public class MemberController {
-	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
+public class MysqlController {
+	private static final Logger logger = LoggerFactory.getLogger(MysqlController.class);
 
 	@Inject
-	private MemberService service;
+	private MysqlService service;
 
-	@RequestMapping(value = "/member", method = RequestMethod.GET)
+	@RequestMapping(value = "/mysqlTest", method = RequestMethod.GET)
 	public String member(Model model) throws Exception {
 		logger.info("home");
 
-		List<MemberVO> memberList = service.selectMember();
+		List<MysqlVO> memberList = service.selectMember();
 
 		model.addAttribute("memberList", memberList);
 
