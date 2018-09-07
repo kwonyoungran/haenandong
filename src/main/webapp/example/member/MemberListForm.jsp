@@ -54,7 +54,7 @@
 				<td>${member.mail1}</td>
 				<td>${member.phone}</td>
 				<td>${member.address}</td>
-				<td>${member.reg}</td>
+				<td>${member.regdate}</td>
 			</tr>
 		</c:forEach>	
 	</table>

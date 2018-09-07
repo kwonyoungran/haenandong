@@ -58,14 +58,16 @@
 			<jsp:include page="Header.jsp" />
 		</div>
 		<div id="main">
-		
 			<!-- contentPage가 없을 경우 FirstView.jsp를 보여준다. -->
 			<c:set var="contentPage" value="${param.contentPage}"/>
-			<c:if test="${contentPage==null}">	
-				<jsp:include page="FirstView.jsp" />
-			</c:if>
-			<jsp:include page="${contentPage}" />
-			
+			<c:choose>	
+				<c:when  test="${empty contentPage}">
+					<jsp:include page="FirstView.jsp" />
+				</c:when>
+				<c:otherwise>
+					<jsp:include page="${contentPage}" />
+				</c:otherwise>
+			</c:choose>
 		</div>
 		<div id="footer"> 
 			<jsp:include page="Footer.jsp" />

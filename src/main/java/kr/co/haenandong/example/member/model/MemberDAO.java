@@ -169,7 +169,7 @@ public class MemberDAO {
 				member.setMail2(mail2);
 				member.setPhone(rs.getString("phone"));
 				member.setAddress(rs.getString("address"));
-				member.setReg(rs.getTimestamp("reg"));
+				member.setRegdate(rs.getTimestamp("regdate"));
 			}
 
 			return member;
@@ -223,7 +223,7 @@ public class MemberDAO {
 				member.setMail1(rs.getString("mail"));
 				member.setPhone(rs.getString("phone"));
 				member.setAddress(rs.getString("address"));
-				member.setReg(rs.getTimestamp("reg"));
+				member.setRegdate(rs.getTimestamp("regdate"));
 				memberList.add(member);
 			}
 

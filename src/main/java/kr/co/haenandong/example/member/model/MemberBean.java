@@ -22,7 +22,7 @@ public class MemberBean {
 	private String mail2; // 이메일 - @ 뒷부분
 	private String phone; // 전화
 	private String address; // 주소
-	private Timestamp reg; // 가입일
+	private Timestamp regdate; // 가입일
 
 	public String getId() {
 		return id;
@@ -112,11 +112,12 @@ public class MemberBean {
 		this.address = address;
 	}
 
-	public Timestamp getReg() {
-		return reg;
+	public Timestamp getRegdate() {
+		return regdate;
 	}
 
-	public void setReg(Timestamp reg) {
-		this.reg = reg;
+	public void setRegdate(Timestamp regdate) {
+		this.regdate = regdate;
 	}
+
 }
