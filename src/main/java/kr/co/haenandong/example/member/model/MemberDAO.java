@@ -12,7 +12,7 @@ import javax.naming.NamingException;
 import kr.co.haenandong.example.member.util.DBConnection;
 
 /**
- * JSP_MEMBER 테이블과 연관된 DAO로 회원 데이터를 처리하는 클래스이다. <br>
+ * MEMBER 테이블과 연관된 DAO로 회원 데이터를 처리하는 클래스이다. <br>
  * <br>
  * Data Access Object - 테이블 당 한개의 DAO를 작성한다.
  */
@@ -57,7 +57,7 @@ public class MemberDAO {
 	} // end stringToDate()
 
 	/**
-	 * 회원정보를 JSP_MEMBER 테이블에 저장하는 메서드
+	 * 회원정보를 MEMBER 테이블에 저장하는 메서드
 	 * 
 	 * @param member
 	 *            가입할 회원정보를 담고있는 TO
@@ -77,7 +77,7 @@ public class MemberDAO {
 			// 쿼리 생성한다.
 			// 가입일의 경우 자동으로 세팅되게 하기 위해 sysdate를 사용
 			StringBuffer sql = new StringBuffer();
-			sql.append("insert into JSP_MEMBER values");
+			sql.append("insert into MEMBER values");
 			sql.append("(?, ?, ?, ?, ?, ?, ?, ?, sysdate)");
 			stringToDate(member);
 			/*
@@ -135,7 +135,7 @@ public class MemberDAO {
 		try {
 			// 쿼리
 			StringBuffer query = new StringBuffer();
-			query.append("SELECT * FROM JSP_MEMBER WHERE ID=?");
+			query.append("SELECT * FROM MEMBER WHERE ID=?");
 
 			conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(query.toString());
@@ -207,7 +207,7 @@ public class MemberDAO {
 
 		try {
 			StringBuffer query = new StringBuffer();
-			query.append("SELECT * FROM JSP_MEMBER");
+			query.append("SELECT * FROM MEMBER");
 
 			conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(query.toString());
@@ -263,7 +263,7 @@ public class MemberDAO {
 		try {
 
 			StringBuffer query = new StringBuffer();
-			query.append("UPDATE JSP_MEMBER SET");
+			query.append("UPDATE MEMBER SET");
 			query.append(" PASSWORD=?, MAIL=?, PHONE=?, ADDRESS=?");
 			query.append(" WHERE ID=?");
 
@@ -323,11 +323,11 @@ public class MemberDAO {
 		try {
 			// 비밀번호 조회
 			StringBuffer query1 = new StringBuffer();
-			query1.append("SELECT PASSWORD FROM JSP_MEMBER WHERE ID=?");
+			query1.append("SELECT PASSWORD FROM MEMBER WHERE ID=?");
 
 			// 회원 삭제
 			StringBuffer query2 = new StringBuffer();
-			query2.append("DELETE FROM JSP_MEMBER WHERE ID=?");
+			query2.append("DELETE FROM MEMBER WHERE ID=?");
 
 			conn = DBConnection.getConnection();
 
@@ -399,7 +399,7 @@ public class MemberDAO {
 		try {
 			// 쿼리 - 먼저 입력된 아이디로 DB에서 비밀번호를 조회한다.
 			StringBuffer query = new StringBuffer();
-			query.append("SELECT PASSWORD FROM JSP_MEMBER WHERE ID=?");
+			query.append("SELECT PASSWORD FROM MEMBER WHERE ID=?");
 
 			conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(query.toString());
@@ -455,7 +455,7 @@ public class MemberDAO {
 		try {
 			// 쿼리
 			StringBuffer query = new StringBuffer();
-			query.append("SELECT ID FROM JSP_MEMBER WHERE ID=?");
+			query.append("SELECT ID FROM MEMBER WHERE ID=?");
 
 			conn = DBConnection.getConnection();
 			pstm = conn.prepareStatement(query.toString());
