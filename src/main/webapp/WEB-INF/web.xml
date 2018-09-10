@@ -46,6 +46,10 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
     
+    <listener>
+        <listener-class>kr.co.haenandong.example.visit.action.VisitSessionListener</listener-class>
+    </listener>
+    
     <resource-ref>
 	 	<description>connection</description>
 	 	<res-ref-name>jdbc/mysql</res-ref-name>
