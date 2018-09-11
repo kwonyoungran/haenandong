@@ -5,7 +5,7 @@
 <head>
 	<title>상단 영역</title>
 	
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	
 	<style type="text/css">
 		#wrap{
