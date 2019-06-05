@@ -1,0 +1,20 @@
+클라이언트
+상위클래스 : Duck
+하위클래스 : 
+MallardDuck
+RedheadDuck
+RubberDuck
+DecoyDuck
+
+캡슐화된 나는 행동
+인터페이스 : FlyBehavior
+실체화 : 
+FlyWighWings
+FlyNoWay
+
+캡슐화된 꽥꽥거리는 행동
+인터페이스 : QuackBehavior
+실체화 : 
+Quack
+Squeak
+MuteQuack
